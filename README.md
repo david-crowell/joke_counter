@@ -7,6 +7,7 @@ Format is demonstrated in sample_jokes.txt
 
 To run:
 $ python joke_counter.py <filename>
+
 e.g.:
 $ python joke_counter.py sample_jokes.txt
 
