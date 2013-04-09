@@ -1,7 +1,8 @@
 import os
 import string as string
+import sys
 
-JOKE_FILENAME = 'jokes.txt'
+DEFAULT_JOKE_FILENAME = 'sample_jokes.txt'
 
 class Joke:	
 	def __init__(self, text):
@@ -60,5 +61,8 @@ def getCountFromFilename(filename):
 	return len(jokes)
 
 if __name__ == '__main__':
-	print getCountFromFilename(JOKE_FILENAME)
+	if (len(sys.argv) > 1):
+		print getCountFromFilename(sys.argv[1])
+	else:
+		print getCountFromFilename(DEFAULT_JOKE_FILENAME)
 
